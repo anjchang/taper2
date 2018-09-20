@@ -1,0 +1,47 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pop</title>
+	<style>
+	div.s{ width:35%; height:50%; border-top-right-radius:50px; border-top-left-radius:50px; position:absolute;  background:tan; border:3vh solid SaddleBrown; padding-left:5vw; padding-top:4vh; bottom:0;}
+  div.w{ display:inline-block; line-height:0.4vh; font-family:sans-serif; min-width:50vw; font-size:3vh}
+  </style>
+</head>
+<body height=100vh width=100vw>
+    <div>
+      <div id="t1" class="s" style="float:left;margin-left:1vw">
+      <div id="c" class='w'></div></div>
+      <div id="t2" class="s" style="float:right;right:1.5vw;z-index:2000">
+      <div id="e" class='w'></div></div>
+    </div>
+<script>
+var t=document.getElementById('t1').style;
+var u=document.getElementById('t2').style;
+var c=document.getElementById('c');
+var e=document.getElementById('e');
+var i=0;
+var d=t.opacity=u.opacity=0.1;
+p="Pop in that slice_Dish devine_Double sided slots_See smoky ghosts_Electric lair sparks_Hint of pop tarts_Eyes smart_Wanna light roast_Sniff a big dose_Giddy piece_Brown dome tip top_Sink my teeth in_Before its too dark_I pop".split("_");
+l=[];q="Popups that chastise_Delish dead time_Easily find marks_Celebrity boasts_Do I care hearts_Stint in the top charts_Hit restart_Walk a tightrope_Riff their Twitter posts_Get no peace_Overdose on hip hop_Drink it all in_Because its too dark_I stop".split("_");
+function r(n){return Math.floor(Math.random()*(n))}
+var x=setInterval(b,999);
+function b(){
+  d=d+0.1;t.opacity=d;u.opacity=d;
+  if (i<q.length-1){
+    i++;
+    var m=r(2);
+    if (m){
+    c.innerHTML+=p[i]+'<p>';
+    setTimeout(function(){e.innerHTML+=q[i]+'<p>';},500)
+    }else{
+      c.innerHTML+=q[i]+'<p>';
+      setTimeout(function(){e.innerHTML+=p[i]+'<p>';},500)
+    }
+  }
+  if (d>1.5){clearInterval(x);f=setInterval(y,800);}
+}
+function y(){  t.top="-9vh";u.top="-9vh";clearInterval(f);z=setInterval(g,500);}
+function g(){  t.top="9vh";u.top="9vh";clearInterval(z);}
+    </script>
+  </body>
+</html>
